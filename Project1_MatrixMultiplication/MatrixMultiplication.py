@@ -1,6 +1,6 @@
 # This program multiplicates two matrices of any number of rows and columns.
 # The matrix elements are filled by User
-# The result is set up and saved as list
+# The result is calculated and saved as list
 
 print('MATRIX MULTIPLICATION\n')
 
