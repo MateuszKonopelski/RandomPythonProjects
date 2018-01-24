@@ -45,10 +45,10 @@ for vr in range(0, c):
     for vc in range(0, v):
         Matrix2[vr][vc] = int(input('M' + str(vr + 1) + str(vc + 1) + ': '))
 
-# Create Product Matrix for Result of multiplication of Matrix1 and Matrix2
-Product = [[] for vr in range(0, r)]
+# Create empty Product Matrix for Result of multiplication of Matrix1 and Matrix2
+Product = [[] for vr in range(0, r)]                # Number of rows defined by number of rows in Matrix1
 for vr in range(0, r):
-    Product[vr] = [0 for columns in range(v)]
+    Product[vr] = [0 for columns in range(v)]       # Number of columns defined by number of columns in Matrix2
 
 # Calculate the Product of two tables
 Products = 0            # dummy variable for calculating sum of product of each row and column
@@ -57,13 +57,13 @@ for vv in range(0, v):
         for vc in range(0, c):
             Products += Matrix1[vr][vc] * Matrix2[vc][vv]
         Product[vr][vv] = Products
-        Products = 0
+        Products = 0        # clear the variable when looped for whole column of Matrix2
 
 
 print('Matrix1: ', Matrix1)
 print('Matrix2: ', Matrix2)
 print('Result of Matrix Multiplication:', Product)
 
-print('\n\ncreated by: MK')
-
-input('Press "Enter" to Exit')
+# Footnotes
+print('\n\nCreated by: MK')
+input('Press "Enter" to Exit')        # Easy way to Exit program If run from script
