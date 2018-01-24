@@ -1,10 +1,6 @@
-# This program multiplicates two matrix with any number of rows and columns.
+# This program multiplicates two matrices of any number of rows and columns.
 # The matrix elements are filled by User
 # The result is set up and saved as list
-# Steps:
-#   1) Ask user for dimensions of first matrix
-#   2) Print design of first Matrix for better understanding of elements naming convention
-#   3)
 
 print('''
 MATRIX MULTIPLICATION\n
