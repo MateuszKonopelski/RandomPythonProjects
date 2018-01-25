@@ -13,7 +13,7 @@ print('''\nElements of matrix1:''')
 element = ''                            # Later will be used to construct each row of the matrix
 for vr in range(0, r):                  # vr - variable row
     for vc in range(0, c):              # vc - variable column
-        element += 'M' + str(vr + 1) + str(vc + 1) + ' '
+        element += 'M' + str(vr + 1) + str(vc + 1) + ' '    # +1 because matrix indications start from 0
     print('|', element, '\b|')
     element = ''
 
@@ -29,7 +29,7 @@ for vr in range(0, r):
 # Ask the user for dimension of second matrix
 v = int(input("Matrix2: Number of columns?: "))     # Only for columns since M2 rows = M1 columns by definition
 print('''\nElements of matrix Matrix2:''')
-element = ''
+
 for vr in range(0, c):                  # vr in c because Matrix 2 must have the same number of rows as Matrix1 columns.
     for vc in range(0, v):
         element += 'M' + str(vr + 1) + str(vc + 1) + ' '
