@@ -1,7 +1,7 @@
 # RandomPythonProjects
 # The projects I am creating while learning Python. 
 
-List:
+# List:
 1. 
 2.
 3. Python3_GenerateRandomNumbers
