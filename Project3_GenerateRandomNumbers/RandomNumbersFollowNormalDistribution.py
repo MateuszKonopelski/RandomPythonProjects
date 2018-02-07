@@ -17,6 +17,7 @@ REZULT:
 ''')
 
 import random
+import numpy
 
 mu_m, sigma_m = 175.5, 7.4
 mu_f, sigma_f = 161.8, 6.9
