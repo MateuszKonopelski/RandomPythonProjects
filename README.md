@@ -1,5 +1,5 @@
 # RandomPythonProjects
-# The projects I am creating while learning Python. 
+The projects I am creating while learning Python.
 
 # List:
 1. 
