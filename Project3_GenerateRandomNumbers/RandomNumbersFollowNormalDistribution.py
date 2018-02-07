@@ -13,24 +13,19 @@ Exercise:
 
 
 
-REZULT:
+RESULT:
 ''')
 
-import random
 import numpy
 
 mu_m, sigma_m = 175.5, 7.4
 mu_f, sigma_f = 161.8, 6.9
 j = 1000 - 0.02 * 1000
 
-women = []
-for i in range(1000):
-    women.append(random.gauss(mu_f, sigma_f))
-print('1000 observations for women: ', [str('{0:.5g}'.format(i)) + ' cm' for i in women])
-print('Minium height of 2.2% tallest women is: ', '{0:.5g}'.format(sorted(women)[980]), 'cm.')
+female = numpy.random.normal(mu_f, sigma_f, 1000)
+print('1000 observations for women: ', [str('{0:.5g}'.format(i)) + ' cm' for i in female])
+print('Minium height of 2.2% tallest women is: ', '{0:.5g}'.format(sorted(female)[980]), 'cm.')
 
-men = []
-for i in range(1000):
-    men.append(random.gauss(mu_m, sigma_m))
-print('1000 observations for men: ', [str('{0:.5g}'.format(i)) + ' cm' for i in men])
-print('Minium height of 2.2% tallest men is:', '{0:.5g}'.format(sorted(men)[980]), 'cm.')
+male = numpy.random.normal(mu_m, sigma_m, 1000)
+print('1000 observations for men: ', [str('{0:.5g}'.format(i)) + ' cm' for i in male])
+print('Minium height of 2.2% tallest men is:', '{0:.5g}'.format(sorted(male)[980]), 'cm.')
