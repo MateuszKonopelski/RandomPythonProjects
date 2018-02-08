@@ -14,4 +14,4 @@
     - HW2_CentralLimitTheorem
         - Calculate Probability that traders will earn <0 or > 20.000 on partilucar week
         - Plot density function
-4.**Python4_**
+4. **Python4_**
