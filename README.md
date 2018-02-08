@@ -6,6 +6,7 @@
     - Multiply any two matrixes
 2. **Python2_BinarySearch**
     - Search for user number between 1-100 with sub-questions: "lower", "higher"
-3. **Python3_GenerateRandomNumbers**
+3. **Python3_StatisticsForDataScience**
+    *Homeworks from Udemy course: 'Statistics for Data Science' solved in Python*
     - Generate random list of 100 numbers that follow certain Normal Distribution
 4.
