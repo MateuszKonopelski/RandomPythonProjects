@@ -17,6 +17,7 @@ RESULT:
 ''')
 
 import numpy
+import matplotlib.pyplot as plt
 
 mu_m, sigma_m = 175.5, 7.4
 mu_f, sigma_f = 161.8, 6.9
@@ -29,3 +30,10 @@ print('Minium height of 2.2% tallest women is: ', '{0:.5g}'.format(sorted(female
 male = numpy.random.normal(mu_m, sigma_m, 1000)
 print('1000 observations for men: ', [str('{0:.5g}'.format(i)) + ' cm' for i in male])
 print('Minium height of 2.2% tallest men is:', '{0:.5g}'.format(sorted(male)[980]), 'cm.')
+
+plt.hist(male, bins='auto', label='Male')
+plt.hist(female, bins='auto', label='Female')
+plt.title("height histogram")
+plt.legend(loc='upper right')
+plt.show()
+
