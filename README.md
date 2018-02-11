@@ -5,7 +5,6 @@
 1. **Python1_MatrixMultiplication**
     - Multiply any two matrixes
 2. **Python**
-    -
 3. **Python3_StatisticsForDataScience**
     *Homeworks from Udemy course: 'Statistics for Data Science' solved in Python*
     - HW1_RandomNumbersFollowNormalDistribution
