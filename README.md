@@ -4,7 +4,8 @@
 # List:
 1. **Python1_MatrixMultiplication**
     - Multiply any two matrixes
-2. **Python**
+2. **Python2_OpenReadTextFile**
+    - Open climax text file (.dly) and read data from it. Save Station name and date of observation into new file.
 3. **Python3_StatisticsForDataScience**
     *Homeworks from Udemy course: 'Statistics for Data Science' solved in Python*
     - HW1_RandomNumbersFollowNormalDistribution
@@ -21,4 +22,6 @@
         - User guesses a word from its anagram
     - Project3_WordGuessing
         - User guess a word with questions if a letter is included in this word.
-5. **Python5_**
+5. **Python5_LinearRegressionFromPoints**
+    - Use set of points to calculate r and regression equation using least squared errors.
+6.
