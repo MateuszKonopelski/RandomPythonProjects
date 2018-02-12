@@ -7,6 +7,7 @@ Manual approach.
 
 # set up
 import math
+import matplotlib.pyplot as plt
 
 # Data
 P1 = (1, 1)
@@ -55,3 +56,24 @@ r = sum / (count - 1)
 
 print('Correlation coefficient r = ', round(r * 100, 2), '%')
 
+# Calculate linear regression equation (y = ax + b) using least squared method
+
+a = r * (sdy / sdx)
+b = meany - a * meanx       # because this equation must intercept in mean of both
+
+print("Linear Regression equation: ", 'y =', round(a, 2), 'x', round(b, 2))
+
+# Scaterplot
+x, y = [], []
+for i in range(len(points)):
+    x.append(points[i][0])
+    y.append(points[i][1])
+
+x1 = min(x)
+y1 = a * x1 + b
+x2 = max(x)
+y2 = a * x2 + b
+
+plt.scatter(x, y)
+plt.plot([x1, x2], [y1, y2], 'k-')
+plt.show()
