@@ -24,4 +24,5 @@
         - User guess a word with questions if a letter is included in this word.
 5. **Python5_LinearRegressionFromPoints**
     - Use set of points to calculate r and regression equation using least squared errors.
+    - plot the results
 6.

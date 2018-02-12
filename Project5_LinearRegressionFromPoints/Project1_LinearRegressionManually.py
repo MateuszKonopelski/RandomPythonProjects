@@ -74,6 +74,8 @@ y1 = a * x1 + b
 x2 = max(x)
 y2 = a * x2 + b
 
-plt.scatter(x, y)
+plt.scatter(x, y, marker="D")
 plt.plot([x1, x2], [y1, y2], 'k-')
+plt.text(x1, max(y1, y2), 'R = ' + str(round(r * 100, 2)) + '%')
+plt.title('Linear Regression of ' + str(len(points)) + ' points.')
 plt.show()
