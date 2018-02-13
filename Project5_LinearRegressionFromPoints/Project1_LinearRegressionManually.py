@@ -63,6 +63,33 @@ b = meany - a * meanx       # because this equation must intercept in mean of bo
 
 print("Linear Regression equation: ", 'y =', round(a, 2), 'x', round(b, 2))
 
+# Calculate the residuals
+res = []
+for i in range(count):
+    res_i = points[i][1] - (a * points[i][0] + b)
+    res.append(res_i)
+print('Residuals: ', res)
+
+# SE_line
+SE_line = 0
+for i in res: SE_line += (i ** 2)
+print('Total squared Error =', round(SE_line, 2))
+
+# SE_meany
+SE_meany = 0
+for i in range(count):
+    SE_meany += (points[i][1] - meany) ** 2      # this is also calculated as sumyy previously
+print('Total variation in y = ', round(SE_meany, 2))
+
+# R-squared
+R_squared = round((1 - SE_line/SE_meany), 4)
+print('Coeffciient of determination = ', R_squared * 100)
+print('Coeddicient of determination = ', round((r ** 2) * 100, 2))
+
+# Calculate the root mean squared error
+rmsd = math.sqrt(SE_line/(count - 1))
+print('Root Mean Squared error =', round(rmsd, 2))
+
 # Scaterplot
 x, y = [], []
 for i in range(len(points)):
@@ -76,6 +103,6 @@ y2 = a * x2 + b
 
 plt.scatter(x, y, marker="D")
 plt.plot([x1, x2], [y1, y2], 'k-')
-plt.text(x1, max(y1, y2), 'R = ' + str(round(r * 100, 2)) + '%')
+plt.text(x1, max(y1, y2), 'Correlation coeffcient R^2= ' + str(round((r ** 2) * 100, 2)) + '%')
 plt.title('Linear Regression of ' + str(len(points)) + ' points.')
 plt.show()
