@@ -5,7 +5,7 @@ def intersect(*args):
     '''
     Method used: One by one element from each argument
     loop through all arguments and return it if
-    it is find in each of the arguements.
+    it is find in each of the arguments.
 
     :param args: Strings or lists
     :return: List with common elements.
