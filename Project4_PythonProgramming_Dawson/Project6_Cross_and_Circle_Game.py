@@ -166,4 +166,3 @@ while True:
         if winner(board) == X or winner(board) == O: break
 
 print('\nEND OF GAME\n', result)
-
