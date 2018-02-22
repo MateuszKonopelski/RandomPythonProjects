@@ -51,7 +51,7 @@ def ask_yes_no(question):
 def ask_number(question):
     '''Ask for User Number on board. It must be between 1 - 9'''
     response = None
-    while response not in range(0, 8):
+    while response not in range(0, 9):
         response = int(input(question)) - 1
     return response
 
@@ -79,16 +79,11 @@ def new_board():
 
 def display_board(board):
     '''Display actual board'''
-    scheme = '''
-                1 | 2 | 3
-                _________
-                4 | 5 | 6
-                _________
-                7 | 8 | 9
-    '''
-    for i in range(NUM_SQUARES):
-        scheme = scheme.replace(str(i+1), str(board[i]))
-    print(scheme)
+    print('\n\t', board[0], '|', board[1], '|', board[2])
+    print('\t', '-' * 10)
+    print('\t', board[3], '|', board[4], '|', board[5])
+    print('\t', '-' * 10)
+    print('\t', board[6], '|', board[7], '|', board[8])
 
 
 def legal_move(board):
@@ -110,59 +105,104 @@ def winner(board):
                      (2, 5, 8),
                      (0, 4, 6),
                      (2, 4, 6)]
-    tie = 0
     for conf in possible_conf:
-        if board[conf[0]] == X and board[conf[1]] == X and board[conf[2]] == X:
-            if computer == X:
-                result = 'Winner is Me!'
-            else:
-                result = 'Oh No. You Won! :('
-            return X
-        elif board[conf[0]] == O and board[conf[1]] == O and board[conf[2]] == O:
-            if computer == O:
-                result = 'Winner is Me!'
-            else:
-                result = 'Oh No. You Won! :('
-            return O
+        if board[conf[0]] == board[conf[1]] == board[conf[2]] != EMPTY:
+            return board[conf[0]]
+        elif EMPTY not in board:
+            return TIE
         else:
-            if [1 for i in board if i == ' '] == 1:
-                pass
-            tie += 1
-            #if tie == 8: print('No winner! Tie')
+            return None
 
 
-def human_move(board):
+def human_move(board, human):
     '''Indicate your position on board'''
-    choice = ask_number('What is your move? <1-9>')
-    if choice in legal_move(board):
-        board[choice] = human
-        display_board(board)
-    else:
-        print('This field is already used or outside <1-9> range.')
-        human_move(board)
+    legal = legal_move(board)
+    move = None
+    while move not in legal:
+        move = ask_number('What is your move? <1-9>')
+        if move not in legal:
+            print('This field is already used or outside <1-9> range.')
+    return move
 
-
-def comp_move(board):
+def comp_move(board, computer, human):
     '''Algorithm to set computer move'''
-    board[random.choice(legal_move(board))] = computer
-    print('My move:')
+    # Copy of the existing list in order to make tests
+    board = board[:]
+
+    # Best positions to have on board (middle, corners, rest)
+    BEST_MOVES = (4, 0, 2, 6, 8, 1, 3, 5, 7)
+
+    # If I can win the game by setting last place:
+    for move in legal_move(board):
+        board[move] == computer
+        if winner(board) == computer:
+            print(move)
+            return(move)
+        # this move was checked, undo it
+        board[move] = EMPTY
+
+    # If user can win, block it
+    for move in legal_move(board):
+        board[move] = human
+        if winner(board) == human:
+            return(move)
+        # this move was checked, undo it
+        board[move] = EMPTY
+
+    # If noone can win, choose the best field
+    for move in BEST_MOVES:
+        if move in legal_move(board):
+            return(move)
+
+
+def next_turn(turn):
+    '''Change the turn maker'''
+    if turn == X:
+        return O
+    else:
+        return X
+
+
+def congrat_winner(the_winner, computer, human):
+    '''Print the winner or tie with a comment'''
+    if the_winner != TIE:
+        print(the_winner, 'is the winner!')
+    else:
+        print("It's a tie!")
+
+    if the_winner == human:
+        print('Oh No! How is it possible? You tricked me little human!',
+                'But it will not happend again! I promise that.')
+
+    elif the_winner == computer:
+        print('This is what I anticipated. You have no chance with me human!',
+              'This is a proof that computers are better than humans')
+
+    elif the_winner == TIE:
+        print('You were lucky this time. It"s a tie. Would you like to play again?')
+
+
+# Main function
+def main():
+    display_instruct()
+    computer, human = pieces()
+    turn = X
+    board = new_board()
     display_board(board)
 
+    while not winner(board):
+        if turn == human:
+            move = human_move(board, human)
+            board[move] = human
+        else:
+            move = comp_move(board, computer, human)
+            board[move] = computer
+        display_board(board)
+        turn = next_turn(turn)
+
+    the_winner = winner(board)
+    congrat_winner(the_winner, computer, human)
+
 # Procedure
-display_instruct()
-pieces()
-board = new_board()
-
-while True:
-    if human == X:
-        human_move(board)
-        if winner(board) == X or winner(board) == O: break
-        comp_move(board)
-        if winner(board) == X or winner(board) == O: break
-    else:
-        comp_move(board)
-        if winner(board) == X or winner(board) == O: break
-        human_move(board)
-        if winner(board) == X or winner(board) == O: break
-
-print('\nEND OF GAME\n', result)
+main()
+input('\n\nPress Enter to finish the game.\n\n')
