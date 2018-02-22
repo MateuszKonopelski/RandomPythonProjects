@@ -22,6 +22,8 @@
         - User guesses a word from its anagram
     - Project3_WordGuessing
         - User guess a word with questions if a letter is included in this word.
+    - Project4_Cross_and_Cirle_Game
+        - User play with computer Cross and Cirle Game on 3x3 board.
 5. **Project5_LinearRegressionFromPoints**
     - Use set of points to calculate r and regression equation using least squared errors.
     - plot the results
