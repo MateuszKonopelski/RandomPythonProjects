@@ -203,6 +203,7 @@ def main():
     the_winner = winner(board)
     congrat_winner(the_winner, computer, human)
 
+
 # Procedure
 main()
 input('\n\nPress Enter to finish the game.\n\n')
