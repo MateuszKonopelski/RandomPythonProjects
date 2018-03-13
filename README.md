@@ -31,3 +31,9 @@
     *Random code I developed from book: Python Introduction by Mark Lutz*
     - Project1_FunctionFindCommonElement
         - Function takes multiple arguments and return elements from them which are common for all.
+7. **Project7_CodingBat_Solutions**
+    *Code practice exercises from codingbat.com website*
+    - Basic_CodingBat_Solutions
+    - Medium_CodingBat_Solutions
+8. **Project8_PracticePython_org**
+    *Beginner Python exercises from website: practicepython.org*
