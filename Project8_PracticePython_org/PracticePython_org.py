@@ -155,4 +155,97 @@ def firstlast(lista):
 A = [5, 10, 15, 20, 25]
 print(firstlast(A))
    
-    
+#Write a program that asks the user how many Fibonnaci numbers to generate and then
+#generates them. Take this opportunity to think about how you can use functions.
+#Make sure to ask the user to enter the number of numbers in the sequence to generate.
+#(Hint: The Fibonnaci seqence is a sequence of numbers where the next number in the
+#sequence is the sum of the previous two numbers in the sequence. The sequence looks like
+#this: 1, 1, 2, 3, 5, 8, 13, …)
+
+count = int(input('How many numbers should i generate?'))
+
+lista = [1]
+p_number = 1
+p_p_number = 0
+
+for i in range(count - 1):
+    new_number = p_number + p_p_number
+    lista.append(new_number)
+    p_p_number = p_number
+    p_number = new_number
+print(lista)
+
+lista = [1, 1]
+for i in range(count - 2):
+    lista.append(lista[-1] + lista[-2])
+print(lista)
+
+#Write a program (function!) that takes a list and returns a new list
+#that contains all the elements of the first list minus all the duplicates.
+#Extras:
+#Write two different functions to do this - one using a loop and constructing a list,
+#and another using sets. Go back and do Exercise 5 using sets, and write the solution
+#for that in a different function.
+
+def list_without_duplicates1(lista):
+    return list(set(lista))
+
+def list_without_duplicates2(lista):
+    newlist = []
+    for element in lista:
+        if element not in newlist:
+            newlist.append(element)
+    return newlist
+
+E = [1, 2, 3, 4, 5, 5, 5, 5, 6, 7, 8, 9, 9]
+
+print(list_without_duplicates1(E))
+print(list_without_duplicates2(E))
+
+#Write a program (using functions!) that asks the user for a long string containing
+#multiple words. Print back to the user the same string, except with the words in
+#backwards order. For example, say I type the string:
+#  My name is Michele
+#Then I would see the string:
+#  Michele is name My
+#shown back to me.
+
+def reverse_order(string):
+    return ' '.join(string.split()[::-1])
+
+string = input('String to reverse: ')
+
+print(reverse_order(string))
+
+#Write a password generator in Python. Be creative with how you generate passwords -
+#strong passwords have a mix of lowercase letters, uppercase letters, numbers, and
+#symbols. The passwords should be random, generating a new password every time the
+#user asks for a new password. Include your run-time code in a main method.
+#Extra:
+#Ask the user how strong they want their password to be. For weak passwords,
+#pick a word or two from a list.
+
+import random
+import string
+
+def Password_generator():
+    answer = input('How strong do you want to have password?')
+
+    try:
+        if answer == 'weak':
+            return random.choice(['pass1', 'pass2', 'pass3', 'pass4'])
+        elif answer == 'medium':
+            return ''.join([random.choice(string.ascii_letters.lower()) for x in range(10)])
+        elif answer == 'hard':
+            letters = string.ascii_letters
+            signs = '!@#$%^&*()_+=-{}][:";<>?,./'
+            return ''.join([random.choice(letters + signs) for x in range(20)])
+        else:
+            raise IndexError()
+    except:
+        return 'You answer is out of possible range'
+
+print(Password_generator())
+
+
+
