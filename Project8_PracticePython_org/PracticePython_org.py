@@ -79,3 +79,80 @@ print(list(filter(None, newlist)))
 #Randomly generate two lists to test this
 #Write this in one line of Python (don’t worry if you can’t figure this out at this point - we’ll get to it soon)
 
+
+import random
+
+a = [random.randrange(1, 1000) for x in range(100)]
+b = [random.randrange(1, 1000) for x in range(100)]
+newlist = list(set([x for x in a if x in b]))
+print(newlist)
+
+#Ask the user for a string and print out whether this string is a palindrome or not. (A palindrome is a string 
+#that reads the same forwards and backwards.)
+
+string = input('String to test')
+
+if string.lower() == string[::-1].lower():
+    print('It is palindrome')
+else:
+    print('It is not palindrome')
+
+#Let’s say I give you a list saved in a variable: a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]. 
+#Write one line of Python that takes this list a and makes a new list that has only the even elements of this list in it.
+
+a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+print([element for element in a if element % 2 == 0])
+
+#Make a two-player Rock-Paper-Scissors game. (Hint: Ask for player plays (using input), compare them, print out a 
+#message of congratulations to the winner, and ask if the players want to start a new game)
+#Remember the rules:
+#Rock beats scissors
+#Scissors beats paper
+#Paper beats rock
+
+import random
+
+def game(player1, player2):
+    if player1 == player2 == ('R' or 'S' or 'P'): return '\nDraw\n'
+    elif player1 == 'R' and player2 == 'S': return '\nWinner is you\n'
+    elif player1 == 'S' and player2 == 'P': return '\nWinner is you\n'
+    elif player1 == 'P' and player2 == 'R': return '\nWinner is you\n'
+    else: return '\nI won!\n'
+
+print('''
+This is a two-player Rock-Paper-Scissors game.
+Remember the rules:
+Rock beats scissors
+Scissors beats paper
+Paper beats rock
+
+''')
+
+while True:
+    user = input('Rock (R), Scissors (S), Paper (P) or Exit(E)?')
+    if user == 'E' or user == 'e': break
+    comp = random.choice(['R', 'S', 'P'])
+
+    print(game(user, comp))
+   
+#Generate a random number between 1 and 9 (including 1 and 9). Ask the user to guess the number, then 
+#tell them whether they guessed too low, too high, or exactly right. (Hint: remember to use the user 
+#input lessons from the very first exercise)
+#Extras:
+#Keep the game going until the user types “exit”
+#Keep track of how many guesses the user has taken, and when the game ends, print this out.
+
+'I did it in other project'
+
+
+
+#Write a program that takes a list of numbers (for example, a = [5, 10, 15, 20, 25]) and
+#makes a new list of only the first and last elements of the given list. For practice,
+#write this code inside a function.
+
+def firstlast(lista):
+    return [lista[0], lista[-1]]
+A = [5, 10, 15, 20, 25]
+print(firstlast(A))
+   
+    
