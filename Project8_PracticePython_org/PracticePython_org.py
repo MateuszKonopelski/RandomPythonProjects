@@ -311,8 +311,24 @@ while True:
     print_result(cows, bulls)
     count += 1
     
+# Write a function that takes an ordered list of numbers (a list where the elements are in order from smallest to largest) 
+# and another number. The function decides whether or not the given number is inside the list and returns (then prints) 
+# an appropriate boolean.
+# find is a function that takes an ordered list of numbers and another number,
+# returning true or false whether the element appears in the list
+# l is a list ordered from smallest to largest
+# element is the number to find in the original list   
 
-
+def find_element(element, lista):
+    if element in lista:
+        return True
+ 
+if __name__ == '__main__':
+    lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0]
+    print(find_element(4, lista))
+    print(find_element(6, lista))
+    print(find_element(7, lista))
+    
 
         
     
