@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/../Kaggle/.idea/Kaggle.iml" filepath="$PROJECT_DIR$/../Kaggle/.idea/Kaggle.iml" />
       <module fileurl="file://$PROJECT_DIR$/../LocalProjects/.idea/LocalProjects.iml" filepath="$PROJECT_DIR$/../LocalProjects/.idea/LocalProjects.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/RandomPythonProjects.iml" filepath="$PROJECT_DIR$/.idea/RandomPythonProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pandas_exercises/.idea/pandas_exercises.iml" filepath="$PROJECT_DIR$/../pandas_exercises/.idea/pandas_exercises.iml" />
     </modules>
   </component>
 </project>
