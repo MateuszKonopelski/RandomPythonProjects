@@ -7,6 +7,8 @@
     <orderEntry type="module" module-name="LocalProjects" />
     <orderEntry type="module" module-name="Kaggle" />
     <orderEntry type="module" module-name="pandas_exercises" />
+    <orderEntry type="module" module-name="PycharmProjects" />
+    <orderEntry type="module" module-name="Complete-Python-3-Bootcamp" />
   </component>
   <component name="TestRunnerService">
     <option name="PROJECT_TEST_RUNNER" value="Unittests" />

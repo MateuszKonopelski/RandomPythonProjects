@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Complete-Python-3-Bootcamp/.idea/Complete-Python-3-Bootcamp.iml" filepath="$PROJECT_DIR$/../Complete-Python-3-Bootcamp/.idea/Complete-Python-3-Bootcamp.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Kaggle/.idea/Kaggle.iml" filepath="$PROJECT_DIR$/../Kaggle/.idea/Kaggle.iml" />
       <module fileurl="file://$PROJECT_DIR$/../LocalProjects/.idea/LocalProjects.iml" filepath="$PROJECT_DIR$/../LocalProjects/.idea/LocalProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/PycharmProjects.iml" filepath="$PROJECT_DIR$/../.idea/PycharmProjects.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/RandomPythonProjects.iml" filepath="$PROJECT_DIR$/.idea/RandomPythonProjects.iml" />
       <module fileurl="file://$PROJECT_DIR$/../pandas_exercises/.idea/pandas_exercises.iml" filepath="$PROJECT_DIR$/../pandas_exercises/.idea/pandas_exercises.iml" />
     </modules>
