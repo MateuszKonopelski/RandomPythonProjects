@@ -9,6 +9,7 @@
     <orderEntry type="module" module-name="pandas_exercises" />
     <orderEntry type="module" module-name="PycharmProjects" />
     <orderEntry type="module" module-name="Complete-Python-3-Bootcamp" />
+    <orderEntry type="module" module-name="python_data_science_and_machine_learning_bootcamp" />
   </component>
   <component name="TestRunnerService">
     <option name="PROJECT_TEST_RUNNER" value="Unittests" />

@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/../.idea/PycharmProjects.iml" filepath="$PROJECT_DIR$/../.idea/PycharmProjects.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/RandomPythonProjects.iml" filepath="$PROJECT_DIR$/.idea/RandomPythonProjects.iml" />
       <module fileurl="file://$PROJECT_DIR$/../pandas_exercises/.idea/pandas_exercises.iml" filepath="$PROJECT_DIR$/../pandas_exercises/.idea/pandas_exercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../python_data_science_and_machine_learning_bootcamp/.idea/python_data_science_and_machine_learning_bootcamp.iml" filepath="$PROJECT_DIR$/../python_data_science_and_machine_learning_bootcamp/.idea/python_data_science_and_machine_learning_bootcamp.iml" />
     </modules>
   </component>
 </project>

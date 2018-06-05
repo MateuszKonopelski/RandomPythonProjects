@@ -4,5 +4,6 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../Complete-Python-3-Bootcamp" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../pandas_exercises" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../python_data_science_and_machine_learning_bootcamp" vcs="Git" />
   </component>
 </project>
